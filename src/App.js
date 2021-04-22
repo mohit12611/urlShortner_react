@@ -8,7 +8,6 @@ import {
 import LoginPage from './login';
 import MainPage from './mainPage';
 import RegisterPage from './register'
-import axios from 'axios';
 
 function App() {
 

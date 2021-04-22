@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
 function LoginPage() {
+    let localServer = "http://localhost:5000/";
+    let server = "https://url-shortner-express-server.herokuapp.com/";
 
     let history = useHistory();
 
@@ -16,7 +18,7 @@ function LoginPage() {
     let handleSubmit = async (e) => {
         e.preventDefault();
 
-        let recievedTokenData = await axios.post(`http://localhost:5000/loginUser`, data);
+        let recievedTokenData = await axios.post(`${server}loginUser`, data);
 
         window.localStorage.setItem("app_token", recievedTokenData.data.token);
 

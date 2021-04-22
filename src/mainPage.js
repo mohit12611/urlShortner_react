@@ -7,6 +7,8 @@ import { PostUrl } from './axios';
 
 function MainPage() {
 
+    let localServer = "http://localhost:5000/";
+    let server = "https://url-shortner-express-server.herokuapp.com/";
 
     const [urlData, setUrlData] = useState([]);
     const [longUrl, setLongUrl] = useState("");
@@ -14,7 +16,7 @@ function MainPage() {
 
     useEffect(async () => {
         console.log("hi");
-        let checkToken = await axios.get(`http://localhost:5000/checkToken`, {
+        let checkToken = await axios.get(`${server}checkToken`, {
             headers: {
                 authorization: window.localStorage.getItem("app_token")
             }
@@ -62,7 +64,7 @@ function MainPage() {
                                         <td>
                                             <a href={url.longUrl}>{url.longUrl}</a> </td>
                                         <td>
-                                            <a href={`http://localhost:5000/${tokenData.data._id}/${url.shortUrl}`} target="_blank" rel="noopener noreferrer">{url.shortUrl}</a> </td>
+                                            <a href={`${server}${tokenData.data._id}/${url.shortUrl}`} target="_blank" rel="noopener noreferrer">{url.shortUrl}</a> </td>
                                         <td>{url.clicks}</td>
                                     </tr>
                                 )

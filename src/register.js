@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 
 function RegisterPage() {
+    let localServer = "http://localhost:5000/";
+    let server = "https://url-shortner-express-server.herokuapp.com/";
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [name, setName] = useState("");
@@ -18,7 +21,7 @@ function RegisterPage() {
     let handleSubmit = async (e) => {
         e.preventDefault();
         console.log(data);
-        let registrationData = await axios.post(`http://localhost:5000/registerUsers`, data);
+        let registrationData = await axios.post(`${server}registerUsers`, data);
         history.push("/");
     };
 

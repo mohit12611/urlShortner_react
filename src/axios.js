@@ -1,14 +1,16 @@
 import axios from "axios";
 
+let localServer = "http://localhost:5000/";
+let server = "https://url-shortner-express-server.herokuapp.com/";
 
 export function GetMainPage() {
-    return axios.get(`http://localhost:5000/`);
+    return axios.get(`${server}`);
 }
 
 export function PostUrl(data) {
-    return axios.post(`http://localhost:5000/urls`,data);
+    return axios.post(`${server}urls`, data);
 }
 
 export function GetShortUrl() {
-    return axios.get(`http://localhost:5000/:shortUrl`)
+    return axios.get(`${server}:shortUrl`)
 }
