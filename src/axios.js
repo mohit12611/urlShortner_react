@@ -1,7 +1,7 @@
 import axios from "axios";
 
 let localServer = "http://localhost:5000/";
-let server = "https://url-shortner-express-server.herokuapp.com/";
+let server = "https://url-shortner-serverside.herokuapp.com/";
 
 export function GetMainPage() {
     return axios.get(`${server}`);

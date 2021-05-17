@@ -8,7 +8,7 @@ import { PostUrl } from './axios';
 function MainPage() {
 
     let localServer = "http://localhost:5000/";
-    let server = "https://url-shortner-express-server.herokuapp.com/";
+    let server = "https://url-shortner-serverside.herokuapp.com/";
 
     const [urlData, setUrlData] = useState([]);
     const [longUrl, setLongUrl] = useState("");

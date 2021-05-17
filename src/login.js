@@ -4,7 +4,7 @@ import { Link, useHistory } from 'react-router-dom';
 
 function LoginPage() {
     let localServer = "http://localhost:5000/";
-    let server = "https://url-shortner-express-server.herokuapp.com/";
+    let server = "https://url-shortner-serverside.herokuapp.com/";
 
     let history = useHistory();
 
