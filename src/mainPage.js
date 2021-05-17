@@ -52,7 +52,6 @@ function MainPage() {
                     <tr>
                         <th>Full URL</th>
                         <th>Short URL</th>
-                        <th>Clicks</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -62,10 +61,11 @@ function MainPage() {
                                 return (
                                     <tr>
                                         <td>
-                                            <a href={url.longUrl}>{url.longUrl}</a> </td>
+                                            <a href={url.longUrl}>{url.longUrl}</a> 
+                                        </td>
                                         <td>
-                                            <a href={`${server}${tokenData.data._id}/${url.shortUrl}`} target="_blank" rel="noopener noreferrer">{url.shortUrl}</a> </td>
-                                        <td>{url.clicks}</td>
+                                            <a href={`${server}${tokenData.data._id}/${url.shortUrl}`} target="_blank" rel="noopener noreferrer">{url.shortUrl}</a>
+                                        </td>
                                     </tr>
                                 )
                             }
